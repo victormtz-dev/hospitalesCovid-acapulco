@@ -1,0 +1,84 @@
+<div class="col-md-8 mx-auto">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Nuevo hospital</h3>
+    </div>
+    <div class="card-body">
+      <form class="row g-3 needs-validation"  action="/hospital/new-hospital" method="POST">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre del hospital</label>
+          <input type="text" class="form-control" name="nombreHospital" required/>
+        </div>
+        <div class="col-md-6">
+          <label for="horario" class="form-label">Tipo de servicio medico</label>
+          <input type="text" class="form-control"  placeholder="Publico o Privado" name="tipoServicioMedico" required/>
+        </div>
+        <div class="col-12">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            name="direccion"
+            placeholder="Acapulco - Aeropuerto Acapulco 1018, Icacos, 39860 Acapulco de Juárez, Gro."
+            required
+          />
+        </div>
+        <div class="col-md-6">
+            <label for="horario" class="form-label">Disponiblidad de horario</label>
+            <input type="text" class="form-control" name="horario"  placeholder="Ej. 08:00-23:00 o abierto 24 hrs" required/>
+        </div>
+
+        <div class="col-md-6">
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="text" class="form-control" name="telefono" required/>
+        </div>
+
+        <div class="col-md-6">
+             <label for="paginaWeb" class="form-label">Pagina web</label>
+            <input type="text" class="form-control" name="paginaWeb"  placeholder="Si no cuenta con pagina web, ponga '---'" required/>
+        </div>
+
+        <div class="col-md-6">
+             <label for="correo" class="form-label">Correo electronico</label>
+            <input type="text" class="form-control" name="correo" required/>
+        </div>
+
+
+
+        <div class="col-md-3">
+            <label for="estacionamiento" class="form-label">Estacionamiento</label>
+            <input type="text" class="form-control" name="estacionamiento"  placeholder="Si o No" required/>
+        </div>
+
+         <div class="col-md-3">
+            <label for="elevadores" class="form-label">Elevadores</label>
+            <input type="text" class="form-control" name="elevadores"  placeholder="Si o No" required/>
+        </div>
+
+         <div class="col-md-3">
+             <label for="rampas" class="form-label">Rampas</label>
+            <input type="text" class="form-control" name="rampas"  placeholder="Si o No" required/>
+        </div>
+
+         <div class="col-md-3">
+            <label for="ambulancias" class="form-label">No. de ambulancias</label>
+            <input type="number" class="form-control" name="ambulancias"  placeholder="Ej. 4" required/>
+        </div>
+
+        
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Camas Totales</label>
+          <input type="number" class="form-control" name="camasTotales" required/>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Camas Ocupadas</label>
+          <input type="number" class="form-control" name="camasOcupadas" required/>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Registrar hospital</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

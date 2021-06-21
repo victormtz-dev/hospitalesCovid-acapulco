@@ -1,0 +1,86 @@
+<div class="col-md-8 mx-auto">
+  <div class="card text-center">
+    <div class="card-header">
+      <h3>Editando Hospital</h3>
+    </div>
+    <div class="card-body">
+      <form class="row g-3" action="/hospital/edit/{{hospitalEdit.id}}?_method=PUT" method="POST">
+        <input type="hidden" name="_method" value="PUT">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre del hospital</label>
+          <input type="text" class="form-control" name="nombreHospital" value="{{hospitalEdit.nombreHospital}}" required/>
+        </div>
+        <div class="col-md-6">
+          <label for="horario" class="form-label">Tipo de servicio medico</label>
+          <input type="text" class="form-control" name="tipoServicioMedico" placeholder="Publico o Privado" value="{{hospitalEdit.tipoServicioMedico}}" required/>
+        </div>
+        <div class="col-12">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            name="direccion"
+            placeholder="Ej. Acapulco - Aeropuerto Acapulco 1018, Icacos, 39860 Acapulco de Juárez, Gro."
+            value="{{hospitalEdit.direccion}}"
+           required
+          />
+        </div>
+        <div class="col-md-6">
+            <label for="horario" class="form-label">Disponiblidad de horario</label>
+            <input type="text" class="form-control" name="horario"  placeholder="Ej. 08:00-23:00 o abierto 24 hrs" value="{{hospitalEdit.horario}}" required />
+        </div>
+
+        <div class="col-md-6">
+            <label for="telefono" class="form-label">Telefono</label>
+            <input type="text" class="form-control" name="telefono" value="{{hospitalEdit.telefono}}" required/>
+        </div>
+
+        <div class="col-md-6">
+             <label for="paginaWeb" class="form-label">Pagina web</label>
+            <input type="text" class="form-control" name="paginaWeb"  placeholder="Si no cuenta con pagina web, ponga '---'" value="{{hospitalEdit.paginaWeb}}" required/>
+        </div>
+
+        <div class="col-md-6">
+             <label for="correo" class="form-label">Correo electronico</label>
+            <input type="text" class="form-control" name="correo" value="{{hospitalEdit.correo}}" />
+        </div>
+
+
+
+        <div class="col-md-3">
+            <label for="estacionamiento" class="form-label">Estacionamiento</label>
+            <input type="text" class="form-control" name="estacionamiento"  placeholder="Si o No" value="{{hospitalEdit.estacionamiento}}" required/>
+        </div>
+
+         <div class="col-md-3">
+            <label for="elevadores" class="form-label">Elevadores</label>
+            <input type="text" class="form-control" name="elevadores"  placeholder="Si o No" value="{{hospitalEdit.elevadores}}" required/>
+        </div>
+
+         <div class="col-md-3">
+             <label for="rampas" class="form-label">Rampas</label>
+            <input type="text" class="form-control" name="rampas"  placeholder="Si o No" value="{{hospitalEdit.rampas}}"  required/>
+        </div>
+
+         <div class="col-md-3">
+            <label for="ambulancias" class="form-label">No. de ambulancias</label>
+            <input type="number" class="form-control" name="ambulancias"  placeholder="Ej. 4" value="{{hospitalEdit.ambulancias}}"  required/>
+        </div>
+
+        
+        <div class="col-md-6">
+          <label for="inputCity" class="form-label">Camas Totales</label>
+          <input type="number" class="form-control" name="camasTotales" value="{{hospitalEdit.camasTotales}}" required/>
+        </div>
+        <div class="col-md-6">
+          <label for="inputState" class="form-label">Camas Ocupadas</label>
+          <input type="number" class="form-control" name="camasOcupadas" value="{{hospitalEdit.camasOcupadas}}" required/>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Editar hospital</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

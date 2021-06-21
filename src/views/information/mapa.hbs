@@ -1,0 +1,40 @@
+<H1>MAPA, RUTAS Y TIEMPO DE LLEGADA AL HOSPITAL</H1>
+<br>
+<hr>
+<div class="d-grid gap-2 col-6 mx-auto">
+<button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  <i class="fas fa-map-marker-alt"></i> Mapa de Hospitales
+</button>
+</div>
+<br>
+<br>
+<br>
+
+
+<!-- Modal GOOGLE MAPS -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Hospitales COVID-19 de Acapulco, Gro.</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="floating-panel">
+          <strong>Hospital al que desea ir:</strong>
+          <select id="end">
+            <option>Elige el hospital</option>
+             {{#each hospitalesAcaNombre}}
+            <option value="{{direccion}}">{{nombreHospital}}</option>
+             {{/each}}
+          </select>
+        </div>
+        <div id="right-panel"></div>
+        <div id="map"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Salir</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,33 @@
+<H1>DATOS SOBRE LAS CAMILLAS EN LOS HOSPITALES</H1>
+<br>
+<hr>
+
+<div class="cuadro">
+    {{#each hospitalesGrafica}}
+        <input type="hidden" class="hospital" name="nombreHospital" value="{{nombreHospital}}">
+        <input type="hidden" class="camas" name="camasDisponibles" value="{{camasDisponibles}}">
+    {{/each}}
+    <canvas id="myChart" width="50" height="50"></canvas>
+</div>
+
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Hospital</th>
+      <th scope="col">Camas Totales</th>
+      <th scope="col">Camas Disponibles</th>
+      <th scope="col">Camas Ocupadas</th>
+    </tr>
+  </thead>
+  <tbody>
+       {{#each hospitalesGrafica}}
+    <tr>
+      <th scope="row">{{nombreHospital}}</th>
+        <td>{{camasTotales}}</td>
+        <td>{{camasOcupadas}}</td>
+        <td>{{camasDisponibles}}</td>
+    </tr>
+       {{/each}}
+  </tbody>
+</table>

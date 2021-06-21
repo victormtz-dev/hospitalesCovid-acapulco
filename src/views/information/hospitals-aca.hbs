@@ -1,0 +1,94 @@
+<h1>INFORMACIÓN DE LOS HOSPITALES ACAPULCO</h1>
+<br>
+<hr>
+<div class="row mb-2">
+  <div class="col-md-6">
+    <h6>Camas disponibles por hospital</h6>
+    <div
+      class="row g-0"
+    >
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Hospital</th>
+      <th scope="col">Camas disponibles</th>
+    </tr>
+  </thead>
+  <tbody>
+       {{#each hospitalesAcaCamas}}
+    <tr class="table-success">
+      <th scope="row">{{nombreHospital}}</th>
+        <td>{{camasDisponibles}}</td>
+    </tr>
+       {{/each}}
+  </tbody>
+</table>
+    </div>
+  </div>
+
+
+  
+  <div class="col-md-6">
+    <h6>Tiempo estimado para llegar al hospital</h6>
+    <div
+      class="row g-0">
+      <div id="mountains">
+         {{#each hospitalesAcaNombre}}
+        <input type="hidden" class="hospitalTiempo" name="nombreHospital" value="{{nombreHospital}}">
+        <input type="hidden" class="hospitalDireccion" name="direccionHospital" value="{{direccion}}">
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div
+      class="row g-0"
+    >
+    <h6>Informacion general de los Hospitales</h6>
+     <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Hospital</th>
+      <th scope="col">Tipo de Servicio</th>
+      <th scope="col">Horario</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Correo</th>
+      <th scope="col">Estacionamiento</th>
+      <th scope="col">Elevadores</th>
+      <th scope="col">Rampas</th>
+    </tr>
+  </thead>
+  <tbody>
+       {{#each hospitalesAcaNombre}}
+    <tr class="table-info">
+      <th  scope="row">{{nombreHospital}}</th>
+        <td >{{tipoServicioMedico}}</td>
+        <td>{{horario}}</td>
+        <td>{{telefono}}</td>
+        <td>{{correo}}</td>
+        <td>{{estacionamiento}}</td>
+        <td>{{elevadores}}</td>
+        <td>{{rampas}}</td>
+    </tr>
+       {{/each}}
+  </tbody>
+</table>
+    </div> 
+
+
+
+  <div style="display: none;">
+  <div id="floating-panel">
+    <strong>Hospital al que desea ir:</strong>
+    <select id="end">
+      <option>Elige el hospital</option>
+       {{#each hospitalesAcaNombre}}
+      <option value="{{direccion}}">{{nombreHospital}}</option>
+       {{/each}}
+    </select>
+  </div>
+  <div id="right-panel"></div>
+  <div id="map"></div>
+</div>

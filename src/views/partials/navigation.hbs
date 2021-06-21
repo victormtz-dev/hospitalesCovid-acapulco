@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+  <div class="container">
+    <a class="navbar-brand" href="/">Hospitales Covid</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/about">Información</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/information/hospital/acapulco">Hospitales Acapulco</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/information/mapa">Mapa de Hospitales</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        {{#if user}}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hospitales
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="/hospital">Lista de hospitales</a></li>
+            <li><a class="dropdown-item" href="/hospital/grafica">Datos de los hospitales</a></li>
+            <li><a class="dropdown-item" href="/hospital/add">Registrar hospital</a></li>
+            <li><a class="dropdown-item" href="/users/logout">Cerrar Sesion</a></li>
+          </ul>
+        </li>
+        {{else}}
+        <form class="d-flex">
+          <a class="btn btn-outline-primary me-2" href="/users/signin">Iniciar Sesión</a>
+          <a class="btn btn-outline-primary"  href="/users/signup">Registrarse</a>   
+        </form>
+        {{/if}}
+      </ul>
+
+    </div>
+  </div>
+  
+</nav>
+
+
